@@ -15,6 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-w4-1Zv">
+                                <rect key="frame" x="60" y="288" width="255" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4668056143" green="0.9125320334" blue="0.47585685259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLP-UM-mMe">
                                 <rect key="frame" x="129" y="561" width="117" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -24,24 +32,16 @@
                                     <color key="titleColor" red="0.4668056143" green="0.9125320334" blue="0.47585685259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="scanBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZQ-IQ-1Pe"/>
+                                    <action selector="scanBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WX-MX-hmo"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-w4-1Zv">
-                                <rect key="frame" x="60" y="288" width="255" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.4668056143" green="0.9125320334" blue="0.47585685259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="SolLook" id="YVc-cn-lwe"/>
                     <connections>
-                        <outlet property="NFCText" destination="sfG-w4-1Zv" id="YPA-MF-y5h"/>
+                        <outlet property="NFCText" destination="sfG-w4-1Zv" id="q6u-Sb-mRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

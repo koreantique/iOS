@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91044EAB24C2E965003F850C /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EAA24C2E965003F850C /* resultViewController.swift */; };
 		91E5433224BC47FC00BD9094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5433124BC47FC00BD9094 /* AppDelegate.swift */; };
 		91E5433424BC47FC00BD9094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5433324BC47FC00BD9094 /* SceneDelegate.swift */; };
 		91E5433624BC47FC00BD9094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5433524BC47FC00BD9094 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91044EAA24C2E965003F850C /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		91E5432E24BC47FC00BD9094 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E5433124BC47FC00BD9094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E5433324BC47FC00BD9094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,7 @@
 		91E5433A24BC47FF00BD9094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91E5433D24BC47FF00BD9094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E5433F24BC47FF00BD9094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91E5434524BC48F200BD9094 /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Test.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,11 @@
 		91E5433024BC47FC00BD9094 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				91E5434524BC48F200BD9094 /* Test.entitlements */,
 				91E5433124BC47FC00BD9094 /* AppDelegate.swift */,
 				91E5433324BC47FC00BD9094 /* SceneDelegate.swift */,
 				91E5433524BC47FC00BD9094 /* ViewController.swift */,
+				91044EAA24C2E965003F850C /* resultViewController.swift */,
 				91E5433724BC47FC00BD9094 /* Main.storyboard */,
 				91E5433A24BC47FF00BD9094 /* Assets.xcassets */,
 				91E5433C24BC47FF00BD9094 /* LaunchScreen.storyboard */,
@@ -141,6 +146,7 @@
 				91E5433624BC47FC00BD9094 /* ViewController.swift in Sources */,
 				91E5433224BC47FC00BD9094 /* AppDelegate.swift in Sources */,
 				91E5433424BC47FC00BD9094 /* SceneDelegate.swift in Sources */,
+				91044EAB24C2E965003F850C /* resultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
