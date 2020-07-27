@@ -1,7 +1,7 @@
 import UIKit
 
 class MenuListController: UITableViewController{
-    var items = ["그린DR이란?", "뉴스", "고객알림", "홍보게시판"]
+    var items = ["그린DR이란?", "알림게시판", "예측정보", "뉴스"]
     
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     
@@ -29,15 +29,16 @@ class MenuListController: UITableViewController{
         //do something
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         
-        let GoNews = storyboard.instantiateViewController(withIdentifier: "NewsPage") //뉴스 게시판
+        
         let GoNotice = storyboard.instantiateViewController(withIdentifier: "NoticePage") //고객 공지 페이지
-        let GoPromotion = storyboard.instantiateViewController(withIdentifier: "PromotionPage") //고객 홍보 게시판
+        let GoPredict = storyboard.instantiateViewController(withIdentifier: "PredictPage") //예측데이터 게시판
+        let GoNews = storyboard.instantiateViewController(withIdentifier: "NewsPage") //뉴스 게시판
         
         switch indexPath.row {
         case 0: dismiss(animated: true)
-        case 1: self.navigationController?.pushViewController(GoNews, animated: true)
-        case 2: self.navigationController?.pushViewController(GoNotice, animated: true)
-        case 3: self.navigationController?.pushViewController(GoPromotion, animated: true)
+        case 1: self.navigationController?.pushViewController(GoNotice, animated: true)
+        case 2: self.navigationController?.pushViewController(GoPredict, animated: true)
+        case 3: self.navigationController?.pushViewController(GoNews, animated: true)
         default:
             return
         }
