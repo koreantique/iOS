@@ -24,6 +24,8 @@
 		91DD94B324B2E91700814F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DD94B124B2E91700814F32 /* Main.storyboard */; };
 		91DD94B524B2E91800814F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DD94B424B2E91800814F32 /* Assets.xcassets */; };
 		91DD94B824B2E91800814F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DD94B624B2E91800814F32 /* LaunchScreen.storyboard */; };
+		91E5C38D24CFF6DC00C3A0F1 /* UserJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5C38C24CFF6DC00C3A0F1 /* UserJoinViewController.swift */; };
+		91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		91DD94B424B2E91800814F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91DD94B724B2E91800814F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91DD94B924B2E91800814F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91E5C38C24CFF6DC00C3A0F1 /* UserJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinViewController.swift; sourceTree = "<group>"; };
+		91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyJoinViewController.swift; sourceTree = "<group>"; };
 		9B127C89136B2FABFBFECCF8 /* Pods-GreenDR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenDR.debug.xcconfig"; path = "Target Support Files/Pods-GreenDR/Pods-GreenDR.debug.xcconfig"; sourceTree = "<group>"; };
 		F7DB576C165DDAC3A5E8C72D /* Pods-GreenDR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenDR.release.xcconfig"; path = "Target Support Files/Pods-GreenDR/Pods-GreenDR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +79,8 @@
 				91044ED024C55422003F850C /* PersonalinfoController.swift */,
 				91044ECE24C553E0003F850C /* LoginViewController.swift */,
 				91D81E7324CEECDC00952D91 /* SignViewController.swift */,
+				91E5C38C24CFF6DC00C3A0F1 /* UserJoinViewController.swift */,
+				91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91DD94B024B2E91700814F32 /* ViewController.swift in Sources */,
+				91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */,
 				91044ED124C55422003F850C /* PersonalinfoController.swift in Sources */,
 				91DD94AC24B2E91700814F32 /* AppDelegate.swift in Sources */,
 				91044EDD24C6BFCD003F850C /* NoticeViewController.swift in Sources */,
@@ -255,6 +262,7 @@
 				91044EE124C6ECE3003F850C /* Type1.swift in Sources */,
 				91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */,
 				91044ECF24C553E0003F850C /* LoginViewController.swift in Sources */,
+				91E5C38D24CFF6DC00C3A0F1 /* UserJoinViewController.swift in Sources */,
 				9143B55924C1BA6700594019 /* MainViewController.swift in Sources */,
 				91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */,
 			);

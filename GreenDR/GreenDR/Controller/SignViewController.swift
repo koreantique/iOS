@@ -10,12 +10,22 @@ import UIKit
 
 class SignViewController: UIViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func tapUserJoinButton(_ sender: Any) {
+        guard let UserVC = self.storyboard?.instantiateViewController(withIdentifier: "UserJoinPage") else {return}
+        self.navigationController?.pushViewController(UserVC, animated: true)
+    }
     
+    
+    @IBAction func tapCompanyJoinButton(_ sender: Any) {
+        guard let CompanyVC = self.storyboard?.instantiateViewController(withIdentifier: "CompanyJoinPage") else {return}
+        self.navigationController?.pushViewController(CompanyVC, animated: true)
+    }
 
     /*
     // MARK: - Navigation

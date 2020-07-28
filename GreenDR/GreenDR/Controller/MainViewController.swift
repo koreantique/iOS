@@ -3,6 +3,9 @@ import UIKit
 
 class MainViewController: UIViewController{
     var menu: SideMenuNavigationController?
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +17,9 @@ class MainViewController: UIViewController{
         SideMenuManager.default.leftMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         
-        
+        titleLabel.layer.borderWidth = 2
+        titleLabel.layer.borderColor = UIColor.white.cgColor
+        titleLabel.layer.cornerRadius = 10
     }
 
     
@@ -33,6 +38,7 @@ class MainViewController: UIViewController{
         //이동할 뷰 컨트롤러 객체를 ID를 통해 참조
         let LoginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginPage") as! LoginViewController
         LoginVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        //delegate설정
         LoginVC.selectionDelegate = self
         
         let PerInfoVC = self.storyboard!.instantiateViewController(withIdentifier: "PersonalInfoPage")

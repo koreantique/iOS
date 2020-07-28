@@ -4,10 +4,11 @@ class MenuListController: UITableViewController{
     var items = ["그린DR이란?", "알림게시판", "예측정보", "뉴스"]
     
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
-    
+    let whiteColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1)
+    let lightGreenColor = UIColor(red: 220/255.0, green: 250/255.0, blue: 235/255.0, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = darkColor
+        tableView.backgroundColor = whiteColor
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -17,8 +18,8 @@ class MenuListController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row]
-        cell.textLabel?.textColor = .white
-        cell.backgroundColor = darkColor
+        cell.textLabel?.textColor = .darkGray
+        cell.backgroundColor = lightGreenColor
         return cell
     }
     

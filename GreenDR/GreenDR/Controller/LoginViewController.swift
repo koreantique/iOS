@@ -3,6 +3,7 @@ import UIKit
 protocol SignButtonDelegate {
     func didTapButton()
 }
+
 class LoginViewController: UIViewController{
     
     var selectionDelegate: SignButtonDelegate!
