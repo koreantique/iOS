@@ -13,11 +13,11 @@
 		91044ED524C58AD1003F850C /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044ED424C58AD1003F850C /* MenuListController.swift */; };
 		91044EDB24C6BC5F003F850C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EDA24C6BC5F003F850C /* NewsViewController.swift */; };
 		91044EDD24C6BFCD003F850C /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EDC24C6BFCD003F850C /* NoticeViewController.swift */; };
-		91044EDF24C6C479003F850C /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EDE24C6C479003F850C /* PromotionViewController.swift */; };
 		91044EE124C6ECE3003F850C /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EE024C6ECE3003F850C /* Type1.swift */; };
 		91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EE224C82ECC003F850C /* NewsDetailController.swift */; };
 		9143B55924C1BA6700594019 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B55824C1BA6700594019 /* MainViewController.swift */; };
 		9145118F24CED10500CD8E57 /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145118E24CED10500CD8E57 /* PredictViewController.swift */; };
+		91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D81E7324CEECDC00952D91 /* SignViewController.swift */; };
 		91DD94AC24B2E91700814F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AB24B2E91700814F32 /* AppDelegate.swift */; };
 		91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AD24B2E91700814F32 /* SceneDelegate.swift */; };
 		91DD94B024B2E91700814F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AF24B2E91700814F32 /* ViewController.swift */; };
@@ -33,11 +33,11 @@
 		91044ED424C58AD1003F850C /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		91044EDA24C6BC5F003F850C /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		91044EDC24C6BFCD003F850C /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
-		91044EDE24C6C479003F850C /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
 		91044EE024C6ECE3003F850C /* Type1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1.swift; sourceTree = "<group>"; };
 		91044EE224C82ECC003F850C /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		9143B55824C1BA6700594019 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9145118E24CED10500CD8E57 /* PredictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
+		91D81E7324CEECDC00952D91 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		91DD94A824B2E91700814F32 /* GreenDR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenDR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD94AB24B2E91700814F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DD94AD24B2E91700814F32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9145119124CEEB6F00CD8E57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91DD94AF24B2E91700814F32 /* ViewController.swift */,
+				9143B55824C1BA6700594019 /* MainViewController.swift */,
+				91044ED424C58AD1003F850C /* MenuListController.swift */,
+				91044EDA24C6BC5F003F850C /* NewsViewController.swift */,
+				91044EE224C82ECC003F850C /* NewsDetailController.swift */,
+				91044EDC24C6BFCD003F850C /* NoticeViewController.swift */,
+				9145118E24CED10500CD8E57 /* PredictViewController.swift */,
+				91044ED024C55422003F850C /* PersonalinfoController.swift */,
+				91044ECE24C553E0003F850C /* LoginViewController.swift */,
+				91D81E7324CEECDC00952D91 /* SignViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		91DD949F24B2E91700814F32 = {
 			isa = PBXGroup;
 			children = (
@@ -85,16 +102,7 @@
 			children = (
 				91DD94AB24B2E91700814F32 /* AppDelegate.swift */,
 				91DD94AD24B2E91700814F32 /* SceneDelegate.swift */,
-				91DD94AF24B2E91700814F32 /* ViewController.swift */,
-				9143B55824C1BA6700594019 /* MainViewController.swift */,
-				91044ED424C58AD1003F850C /* MenuListController.swift */,
-				91044EDA24C6BC5F003F850C /* NewsViewController.swift */,
-				91044EE224C82ECC003F850C /* NewsDetailController.swift */,
-				91044EDC24C6BFCD003F850C /* NoticeViewController.swift */,
-				91044EDE24C6C479003F850C /* PromotionViewController.swift */,
-				9145118E24CED10500CD8E57 /* PredictViewController.swift */,
-				91044ED024C55422003F850C /* PersonalinfoController.swift */,
-				91044ECE24C553E0003F850C /* LoginViewController.swift */,
+				9145119124CEEB6F00CD8E57 /* Controller */,
 				91044EE024C6ECE3003F850C /* Type1.swift */,
 				91DD94B124B2E91700814F32 /* Main.storyboard */,
 				91DD94B424B2E91800814F32 /* Assets.xcassets */,
@@ -242,13 +250,13 @@
 				91044EDD24C6BFCD003F850C /* NoticeViewController.swift in Sources */,
 				91044ED524C58AD1003F850C /* MenuListController.swift in Sources */,
 				91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */,
-				91044EDF24C6C479003F850C /* PromotionViewController.swift in Sources */,
 				91044EDB24C6BC5F003F850C /* NewsViewController.swift in Sources */,
 				9145118F24CED10500CD8E57 /* PredictViewController.swift in Sources */,
 				91044EE124C6ECE3003F850C /* Type1.swift in Sources */,
 				91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */,
 				91044ECF24C553E0003F850C /* LoginViewController.swift in Sources */,
 				9143B55924C1BA6700594019 /* MainViewController.swift in Sources */,
+				91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

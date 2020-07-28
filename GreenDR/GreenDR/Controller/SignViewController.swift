@@ -1,20 +1,20 @@
 //
-//  PromotionViewController.swift
+//  SignViewController.swift
 //  GreenDR
 //
-//  Created by 박용범 on 2020/07/21.
+//  Created by 박용범 on 2020/07/27.
 //  Copyright © 2020 박용범. All rights reserved.
 //
 
 import UIKit
 
-class PromotionViewController: UIViewController {
+class SignViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

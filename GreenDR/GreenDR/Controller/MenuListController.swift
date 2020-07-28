@@ -27,7 +27,7 @@ class MenuListController: UITableViewController{
         
         //Self로 참조하는 부분에서 문제가 발생한다. 이렇게 해야 원하는 스토리보드를 지정하여 이동할 수 있다..
         //do something
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         
         
         let GoNotice = storyboard.instantiateViewController(withIdentifier: "NoticePage") //고객 공지 페이지

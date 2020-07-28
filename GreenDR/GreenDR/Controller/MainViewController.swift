@@ -13,16 +13,17 @@ class MainViewController: UIViewController{
         
         SideMenuManager.default.leftMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        
+        
     }
-    
-    @IBAction func newsButton(_ sender: Any) {
-        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "NewsPage") else {return}
-        self.navigationController?.pushViewController(uvc, animated: true)
-    }
+
     
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
         present(menu!, animated: true)
+
     }
+    
+    
     
     //perINFO버튼을 클릭했을 때 로그인이 되어있으면 개인정보 화면, 로그인이 되어있지 않으면 로그인 화면을 띄워야 한다.
     @IBAction func didTapPerINFO(_ sender: UIBarButtonItem) {
@@ -30,8 +31,9 @@ class MainViewController: UIViewController{
         let ad = UIApplication.shared.delegate as? AppDelegate
         
         //이동할 뷰 컨트롤러 객체를 ID를 통해 참조
-        let LoginVC = self.storyboard!.instantiateViewController(withIdentifier: "LoginPage")
+        let LoginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginPage") as! LoginViewController
         LoginVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        LoginVC.selectionDelegate = self
         
         let PerInfoVC = self.storyboard!.instantiateViewController(withIdentifier: "PersonalInfoPage")
         PerInfoVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
@@ -39,7 +41,15 @@ class MainViewController: UIViewController{
         if (ad?.paramID == nil){
             self.present(LoginVC, animated: true)
         } else{
-            self.present(PerInfoVC, animated: true)
+            self.navigationController?.pushViewController(PerInfoVC, animated: true)
         }
+    }
+}
+
+//dismiss 후 다음페이지 넘기기 위한 delegate
+extension MainViewController: SignButtonDelegate{
+    func didTapButton() {
+        guard let SignVC = self.storyboard?.instantiateViewController(withIdentifier: "SignPage") else {print("error"); return}
+        self.navigationController?.pushViewController(SignVC, animated: true)
     }
 }
