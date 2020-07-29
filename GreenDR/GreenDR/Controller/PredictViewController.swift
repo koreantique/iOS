@@ -12,6 +12,8 @@ import TinyConstraints
 
 class PredictViewController: UIViewController, ChartViewDelegate {
     
+
+    @IBOutlet weak var timeLabel: UILabel!
     
     
     lazy var lineChartView: LineChartView = {
@@ -47,6 +49,14 @@ class PredictViewController: UIViewController, ChartViewDelegate {
         lineChartView.heightToWidth(of: view)
         
         setData()
+        
+        //오늘날짜 표시
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let current_date_string = formatter.string(from: Date())
+        print(current_date_string)
+        
+        timeLabel.text = "\(current_date_string) 전력 생산 예측"
     }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {

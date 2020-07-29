@@ -60,6 +60,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let r = row as? Dictionary<String, Any> {
                 if let title = r["title"] as? String{
                     cell.LabelText.text = title
+                    
                 }
             }
         }
@@ -67,29 +68,33 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    //1. 옵션 - 클릭 감지
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("CLICK!!! \(indexPath.row)")
-        
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: "NewsDetailPage") as! NewsDetailController
-        
-        if let news = newsData{
-            let row = news[indexPath.row]
-            if let r = row as? Dictionary<String, Any> {
-                if let image = r["urlToImage"] as? String{
-                    controller.imageUrl = image
-                }
-                if let desc = r["description"] as? String{
-                    controller.desc = desc
-                }
-                
-            }
-        }
-        //이동! - 수동
-        showDetailViewController(controller, sender: nil)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
-    
+//    
+//    //1. 옵션 - 클릭 감지
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("CLICK!!! \(indexPath.row)")
+//        
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(identifier: "NewsDetailPage") as! NewsDetailController
+//        
+//        if let news = newsData{
+//            let row = news[indexPath.row]
+//            if let r = row as? Dictionary<String, Any> {
+//                if let image = r["urlToImage"] as? String{
+//                    controller.imageUrl = image
+//                }
+//                if let desc = r["description"] as? String{
+//                    controller.desc = desc
+//                }
+//                
+//            }
+//        }
+//        //이동! - 수동
+//        showDetailViewController(controller, sender: nil)
+//    }
+//    
     //2. 세그웨이 :
     //override : 부모/자식 개념. 부모의 함수를 가져다 쓰는 것이다. 여기서는 UIViewController에 있는 prepare함수를 쓴 것.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,6 +109,9 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
                             }
                             if let desc = r["description"] as? String{
                                 controller.desc = desc
+                            }
+                            if let title = r["title"] as? String{
+                                controller.tit = title
                             }
                         }
                     }
@@ -122,6 +130,10 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         TableViewMain.dataSource = self
         
         getNews()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        self.navigationItem.title = "뉴스"
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
     }
     
 

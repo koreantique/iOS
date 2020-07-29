@@ -20,9 +20,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="풍력 발전 예측 알림 서비스" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-6V-IHf">
-                                <rect key="frame" x="0.0" y="471" width="375" height="26"/>
+                                <rect key="frame" x="0.0" y="459" width="375" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92369758059999996" green="1" blue="0.8198851774" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -65,7 +64,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GreenDR" width="712" height="200"/>
+        <image name="GreenDR" width="812" height="264"/>
         <image name="WindGenerator" width="512" height="512"/>
         <image name="kpx" width="207" height="135"/>
         <image name="산업통상자원부" width="506" height="113"/>
