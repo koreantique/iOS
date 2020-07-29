@@ -8,7 +8,9 @@
 
 import UIKit
 
+
 class SignViewController: UIViewController {
+    
 
 
     override func viewDidLoad() {
@@ -27,6 +29,9 @@ class SignViewController: UIViewController {
         self.navigationController?.pushViewController(CompanyVC, animated: true)
     }
 
+    @IBAction func tapLoginButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

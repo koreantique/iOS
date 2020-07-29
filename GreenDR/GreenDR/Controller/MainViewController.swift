@@ -3,7 +3,6 @@ import UIKit
 
 class MainViewController: UIViewController{
     var menu: SideMenuNavigationController?
-    @IBOutlet weak var titleLabel: UILabel!
     
     
     
@@ -16,17 +15,22 @@ class MainViewController: UIViewController{
         
         SideMenuManager.default.leftMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 230.0/255.0, green: 234.0/255.0, blue: 230.0/255.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
         
-        titleLabel.layer.borderWidth = 2
-        titleLabel.layer.borderColor = UIColor.white.cgColor
-        titleLabel.layer.cornerRadius = 10
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "GreenDR")
+        imageView.image = image
+        navigationItem.titleView = imageView
     }
 
     
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
         present(menu!, animated: true)
-
     }
+    
     
     
     
@@ -40,7 +44,8 @@ class MainViewController: UIViewController{
         LoginVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         //delegate설정
         LoginVC.selectionDelegate = self
-        
+
+
         let PerInfoVC = self.storyboard!.instantiateViewController(withIdentifier: "PersonalInfoPage")
         PerInfoVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         

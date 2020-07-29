@@ -13,7 +13,9 @@ class NoticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        self.navigationItem.title = "알림 게시판"
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
         // Do any additional setup after loading the view.
     }
     

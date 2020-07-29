@@ -5,7 +5,7 @@ class MenuListController: UITableViewController{
     
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     let whiteColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1)
-    let lightGreenColor = UIColor(red: 220/255.0, green: 250/255.0, blue: 235/255.0, alpha: 1)
+    let lightGreenColor = UIColor(red: 230.0/255.0, green: 234.0/255.0, blue: 230.0/255.0, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = whiteColor
