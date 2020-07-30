@@ -5,7 +5,7 @@ class MenuListController: UITableViewController{
     
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     let whiteColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1)
-    let lightGreenColor = UIColor(red: 230.0/255.0, green: 234.0/255.0, blue: 230.0/255.0, alpha: 1)
+    let lightGreenColor = UIColor(red: 232/255.0, green: 253/255.0, blue: 202/255.0, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = whiteColor
@@ -23,6 +23,7 @@ class MenuListController: UITableViewController{
         return cell
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -30,19 +31,31 @@ class MenuListController: UITableViewController{
         //do something
         let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         
-        
+        //AppDelegate 데이터 참조
+        let ad = UIApplication.shared.delegate as? AppDelegate
+
         let GoNotice = storyboard.instantiateViewController(withIdentifier: "NoticePage") //고객 공지 페이지
         let GoPredict = storyboard.instantiateViewController(withIdentifier: "PredictPage") //예측데이터 게시판
         let GoNews = storyboard.instantiateViewController(withIdentifier: "NewsPage") //뉴스 게시판
         
         switch indexPath.row {
         case 0: dismiss(animated: true)
-        case 1: self.navigationController?.pushViewController(GoNotice, animated: true)
+        case 1: if(ad?.paramID != nil){
+            self.navigationController?.pushViewController(GoNotice, animated: true)} else{showAlert(title: "알림", message: "로그인을 먼저 해주세요")}
         case 2: self.navigationController?.pushViewController(GoPredict, animated: true)
         case 3: self.navigationController?.pushViewController(GoNews, animated: true)
         default:
             return
         }
 
+    }
+    
+    func showAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: {action in
+            print("tapped Dismiss")
+        }))
+        
+        present(alert, animated: true)
     }
 }

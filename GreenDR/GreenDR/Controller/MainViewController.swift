@@ -16,12 +16,12 @@ class MainViewController: UIViewController{
         SideMenuManager.default.leftMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
 
-//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 230.0/255.0, green: 234.0/255.0, blue: 230.0/255.0, alpha: 1)
+
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
         imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "GreenDR")
+        let image = UIImage(named: "GreenDrLogo")
         imageView.image = image
         navigationItem.titleView = imageView
     }
@@ -49,6 +49,7 @@ class MainViewController: UIViewController{
         let PerInfoVC = self.storyboard!.instantiateViewController(withIdentifier: "PersonalInfoPage")
         PerInfoVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         
+        //정보 유무에 따라서 이동.
         if (ad?.paramID == nil){
             self.present(LoginVC, animated: true)
         } else{

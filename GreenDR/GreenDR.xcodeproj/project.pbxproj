@@ -15,8 +15,11 @@
 		91044EDD24C6BFCD003F850C /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EDC24C6BFCD003F850C /* NoticeViewController.swift */; };
 		91044EE124C6ECE3003F850C /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EE024C6ECE3003F850C /* Type1.swift */; };
 		91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EE224C82ECC003F850C /* NewsDetailController.swift */; };
+		911A41F724D2DDC7004348DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911A41F624D2DDC7004348DD /* GoogleService-Info.plist */; };
+		911A41FA24D2E5F7004348DD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911A41F924D2E5F7004348DD /* Utilities.swift */; };
 		9143B55924C1BA6700594019 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B55824C1BA6700594019 /* MainViewController.swift */; };
-		9145118F24CED10500CD8E57 /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145118E24CED10500CD8E57 /* PredictViewController.swift */; };
+		9145118F24CED10500CD8E57 /* PredictDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145118E24CED10500CD8E57 /* PredictDetailController.swift */; };
+		91458CB624D19E5000C7DA1E /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91458CB524D19E5000C7DA1E /* PredictViewController.swift */; };
 		91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D81E7324CEECDC00952D91 /* SignViewController.swift */; };
 		91DD94AC24B2E91700814F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AB24B2E91700814F32 /* AppDelegate.swift */; };
 		91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AD24B2E91700814F32 /* SceneDelegate.swift */; };
@@ -37,8 +40,11 @@
 		91044EDC24C6BFCD003F850C /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		91044EE024C6ECE3003F850C /* Type1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1.swift; sourceTree = "<group>"; };
 		91044EE224C82ECC003F850C /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
+		911A41F624D2DDC7004348DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		911A41F924D2E5F7004348DD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9143B55824C1BA6700594019 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9145118E24CED10500CD8E57 /* PredictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
+		9145118E24CED10500CD8E57 /* PredictDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictDetailController.swift; sourceTree = "<group>"; };
+		91458CB524D19E5000C7DA1E /* PredictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
 		91D81E7324CEECDC00952D91 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		91DD94A824B2E91700814F32 /* GreenDR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenDR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD94AB24B2E91700814F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		911A41F824D2E5D2004348DD /* Helphers */ = {
+			isa = PBXGroup;
+			children = (
+				911A41F924D2E5F7004348DD /* Utilities.swift */,
+			);
+			path = Helphers;
+			sourceTree = "<group>";
+		};
 		9145119124CEEB6F00CD8E57 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +89,8 @@
 				91044EDA24C6BC5F003F850C /* NewsViewController.swift */,
 				91044EE224C82ECC003F850C /* NewsDetailController.swift */,
 				91044EDC24C6BFCD003F850C /* NoticeViewController.swift */,
-				9145118E24CED10500CD8E57 /* PredictViewController.swift */,
+				91458CB524D19E5000C7DA1E /* PredictViewController.swift */,
+				9145118E24CED10500CD8E57 /* PredictDetailController.swift */,
 				91044ED024C55422003F850C /* PersonalinfoController.swift */,
 				91044ECE24C553E0003F850C /* LoginViewController.swift */,
 				91D81E7324CEECDC00952D91 /* SignViewController.swift */,
@@ -108,12 +123,14 @@
 			children = (
 				91DD94AB24B2E91700814F32 /* AppDelegate.swift */,
 				91DD94AD24B2E91700814F32 /* SceneDelegate.swift */,
+				911A41F824D2E5D2004348DD /* Helphers */,
 				9145119124CEEB6F00CD8E57 /* Controller */,
 				91044EE024C6ECE3003F850C /* Type1.swift */,
 				91DD94B124B2E91700814F32 /* Main.storyboard */,
 				91DD94B424B2E91800814F32 /* Assets.xcassets */,
 				91DD94B624B2E91800814F32 /* LaunchScreen.storyboard */,
 				91DD94B924B2E91800814F32 /* Info.plist */,
+				911A41F624D2DDC7004348DD /* GoogleService-Info.plist */,
 			);
 			path = GreenDR;
 			sourceTree = "<group>";
@@ -196,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91DD94B824B2E91800814F32 /* LaunchScreen.storyboard in Resources */,
+				911A41F724D2DDC7004348DD /* GoogleService-Info.plist in Resources */,
 				91DD94B524B2E91800814F32 /* Assets.xcassets in Resources */,
 				91DD94B324B2E91700814F32 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91458CB624D19E5000C7DA1E /* PredictViewController.swift in Sources */,
 				91DD94B024B2E91700814F32 /* ViewController.swift in Sources */,
 				91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */,
 				91044ED124C55422003F850C /* PersonalinfoController.swift in Sources */,
@@ -258,7 +277,8 @@
 				91044ED524C58AD1003F850C /* MenuListController.swift in Sources */,
 				91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */,
 				91044EDB24C6BC5F003F850C /* NewsViewController.swift in Sources */,
-				9145118F24CED10500CD8E57 /* PredictViewController.swift in Sources */,
+				9145118F24CED10500CD8E57 /* PredictDetailController.swift in Sources */,
+				911A41FA24D2E5F7004348DD /* Utilities.swift in Sources */,
 				91044EE124C6ECE3003F850C /* Type1.swift in Sources */,
 				91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */,
 				91044ECF24C553E0003F850C /* LoginViewController.swift in Sources */,
