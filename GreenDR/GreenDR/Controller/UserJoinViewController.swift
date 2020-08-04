@@ -13,12 +13,11 @@ import FirebaseFirestore
 
 class UserJoinViewController: UIViewController {
 
-    
-    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var pwConfirmTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
+
     @IBOutlet weak var phoneTextField: UITextField!
     
     
@@ -26,11 +25,13 @@ class UserJoinViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
     }
     //Check the fields and validate that the data is correct. If everything is correct, this method returns nil, Otherwise, it returns the error message
     func validateFields() -> String? {
         //Check that all fields are filled in
-        if idTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || pwTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+        if pwTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             return "Please fill in all fields."
         }
         
@@ -53,7 +54,6 @@ class UserJoinViewController: UIViewController {
             //Create cleaned versions of the data
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = pwTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let id = idTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let phone = phoneTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -67,7 +67,7 @@ class UserJoinViewController: UIViewController {
                     //User was created successfully, now store the firse name and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["name":name, "uid": result!.user.uid ]) { (error) in
+                    db.collection("users").addDocument(data: ["name":name, "password":password,"phone":phone, "uid": result!.user.uid ]) { (error) in
                         if error != nil {
                             print("Error saving user data")
                         }

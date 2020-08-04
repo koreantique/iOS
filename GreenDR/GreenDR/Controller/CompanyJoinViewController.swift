@@ -14,6 +14,8 @@ class CompanyJoinViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
     }
     
 

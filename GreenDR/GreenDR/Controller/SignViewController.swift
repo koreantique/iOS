@@ -16,6 +16,9 @@ class SignViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
     }
     
     @IBAction func tapUserJoinButton(_ sender: Any) {

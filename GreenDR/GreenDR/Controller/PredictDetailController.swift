@@ -110,7 +110,6 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         lineChartView.heightToWidth(of: view)
         
         setData()
-        
         //오늘날짜 표시
         todayDate()
         
