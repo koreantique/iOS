@@ -10,10 +10,21 @@ import UIKit
 
 class NoticeDetailViewController: UIViewController {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    var paramTime: String = ""
+    var paramAmount: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
         // Do any additional setup after loading the view.
+        
+        self.timeLabel.text = paramTime
+        self.amountLabel.text = paramAmount
     }
     
 

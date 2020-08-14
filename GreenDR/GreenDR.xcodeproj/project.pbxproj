@@ -31,6 +31,8 @@
 		91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */; };
 		91FAF6EA24E67BA0007DBCE9 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAF6E924E67BA0007DBCE9 /* PostingViewController.swift */; };
 		91FAF6EC24E69928007DBCE9 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAF6EB24E69928007DBCE9 /* NoticeDetailViewController.swift */; };
+		91FAF6EE24E6B596007DBCE9 /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */; };
+		91FAF6F024E6BA5D007DBCE9 /* NoticeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAF6EF24E6BA5D007DBCE9 /* NoticeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyJoinViewController.swift; sourceTree = "<group>"; };
 		91FAF6E924E67BA0007DBCE9 /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
 		91FAF6EB24E69928007DBCE9 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
+		91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
+		91FAF6EF24E6BA5D007DBCE9 /* NoticeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeType.swift; sourceTree = "<group>"; };
 		9B127C89136B2FABFBFECCF8 /* Pods-GreenDR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenDR.debug.xcconfig"; path = "Target Support Files/Pods-GreenDR/Pods-GreenDR.debug.xcconfig"; sourceTree = "<group>"; };
 		F7DB576C165DDAC3A5E8C72D /* Pods-GreenDR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenDR.release.xcconfig"; path = "Target Support Files/Pods-GreenDR/Pods-GreenDR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +136,8 @@
 				911A41F824D2E5D2004348DD /* Helphers */,
 				9145119124CEEB6F00CD8E57 /* Controller */,
 				91044EE024C6ECE3003F850C /* Type1.swift */,
+				91FAF6EF24E6BA5D007DBCE9 /* NoticeType.swift */,
+				91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */,
 				91DD94B124B2E91700814F32 /* Main.storyboard */,
 				91DD94B424B2E91800814F32 /* Assets.xcassets */,
 				91DD94B624B2E91800814F32 /* LaunchScreen.storyboard */,
@@ -287,8 +293,10 @@
 				911A41FA24D2E5F7004348DD /* Utilities.swift in Sources */,
 				91044EE124C6ECE3003F850C /* Type1.swift in Sources */,
 				91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */,
+				91FAF6F024E6BA5D007DBCE9 /* NoticeType.swift in Sources */,
 				91044ECF24C553E0003F850C /* LoginViewController.swift in Sources */,
 				91E5C38D24CFF6DC00C3A0F1 /* UserJoinViewController.swift in Sources */,
+				91FAF6EE24E6B596007DBCE9 /* NoticeModel.swift in Sources */,
 				9143B55924C1BA6700594019 /* MainViewController.swift in Sources */,
 				91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */,
 				91FAF6EA24E67BA0007DBCE9 /* PostingViewController.swift in Sources */,
