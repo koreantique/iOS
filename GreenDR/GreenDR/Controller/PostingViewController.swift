@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class PostingViewController: UIViewController {
-
+    let ad = UIApplication.shared.delegate as? AppDelegate
+    let ref = Database.database().reference()
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +26,15 @@ class PostingViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.darkGray
         self.navigationItem.title = "Green DR 글쓰기"
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.red]
+        
+        
+        
+        
     }
 
+    @IBAction func tapPostButton(_ sender: Any) {
+        ref.child("Notice").childByAutoId().setValue(["title": titleTextField.text, "time": timeTextField.text, "amount": amountTextField.text])
+            }
+        
 
 }

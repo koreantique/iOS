@@ -30,6 +30,7 @@
 		91E5C38D24CFF6DC00C3A0F1 /* UserJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5C38C24CFF6DC00C3A0F1 /* UserJoinViewController.swift */; };
 		91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */; };
 		91FAF6EA24E67BA0007DBCE9 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAF6E924E67BA0007DBCE9 /* PostingViewController.swift */; };
+		91FAF6EC24E69928007DBCE9 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAF6EB24E69928007DBCE9 /* NoticeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		91E5C38C24CFF6DC00C3A0F1 /* UserJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinViewController.swift; sourceTree = "<group>"; };
 		91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyJoinViewController.swift; sourceTree = "<group>"; };
 		91FAF6E924E67BA0007DBCE9 /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
+		91FAF6EB24E69928007DBCE9 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		9B127C89136B2FABFBFECCF8 /* Pods-GreenDR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenDR.debug.xcconfig"; path = "Target Support Files/Pods-GreenDR/Pods-GreenDR.debug.xcconfig"; sourceTree = "<group>"; };
 		F7DB576C165DDAC3A5E8C72D /* Pods-GreenDR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenDR.release.xcconfig"; path = "Target Support Files/Pods-GreenDR/Pods-GreenDR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				91044EDA24C6BC5F003F850C /* NewsViewController.swift */,
 				91044EE224C82ECC003F850C /* NewsDetailController.swift */,
 				91044EDC24C6BFCD003F850C /* NoticeViewController.swift */,
+				91FAF6EB24E69928007DBCE9 /* NoticeDetailViewController.swift */,
 				91FAF6E924E67BA0007DBCE9 /* PostingViewController.swift */,
 				91458CB524D19E5000C7DA1E /* PredictViewController.swift */,
 				9145118E24CED10500CD8E57 /* PredictDetailController.swift */,
@@ -289,6 +292,7 @@
 				9143B55924C1BA6700594019 /* MainViewController.swift in Sources */,
 				91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */,
 				91FAF6EA24E67BA0007DBCE9 /* PostingViewController.swift in Sources */,
+				91FAF6EC24E69928007DBCE9 /* NoticeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

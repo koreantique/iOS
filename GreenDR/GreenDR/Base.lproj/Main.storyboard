@@ -307,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uej-OP-5kh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="-1805.1724137931035"/>
+            <point key="canvasLocation" x="1940" y="-1805"/>
         </scene>
         <!--News Detail Controller-->
         <scene sceneID="7nu-qW-3aS">
@@ -355,11 +355,12 @@
             <objects>
                 <viewController id="cvn-OJ-PmU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gFK-P7-QfT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5mf-Z4-AJE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xo9-0u-oit"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCj-eJ-Kss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,6 +415,7 @@
                     <connections>
                         <outlet property="tableViewMain" destination="Kg8-w5-1rd" id="B2g-qq-ebz"/>
                         <segue destination="hbj-5Q-2Kf" kind="show" identifier="PostingSegue" id="LYh-zj-5q7"/>
+                        <segue destination="cvn-OJ-PmU" kind="show" identifier="NoticeDetailSegue" id="eSB-ZT-obC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVL-fY-TXR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -429,25 +431,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bla-LU-Hx4">
-                                <rect key="frame" x="16" y="106" width="343" height="34"/>
+                                <rect key="frame" x="16" y="131" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="의무 사용 (신뢰성 Green DR) 발령 시각을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPP-ya-GV9">
-                                <rect key="frame" x="16" y="173" width="343" height="34"/>
+                                <rect key="frame" x="16" y="198" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="의무 사용량을 입력하세요 (단위 : KW)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3f-df-9gm">
-                                <rect key="frame" x="16" y="237" width="343" height="34"/>
+                                <rect key="frame" x="16" y="262" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29G-49-KH4">
-                                <rect key="frame" x="16" y="307" width="343" height="60"/>
+                                <rect key="frame" x="16" y="332" width="343" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -456,10 +458,11 @@
                                 </state>
                                 <connections>
                                     <action selector="tapPostButton:" destination="l93-Yq-nwf" eventType="touchUpInside" id="dCC-F5-FMY"/>
+                                    <action selector="tapPostButton:" destination="hbj-5Q-2Kf" eventType="touchUpInside" id="kxh-fy-Tpu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*신뢰성 Green DR 발령 시 고객들에게 알림이 발생합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxd-TG-1rH">
-                                <rect key="frame" x="69" y="375" width="236" height="12"/>
+                                <rect key="frame" x="69" y="400" width="236" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -470,6 +473,11 @@
                         <viewLayoutGuide key="safeArea" id="EnJ-Ij-NLf"/>
                     </view>
                     <navigationItem key="navigationItem" id="SZa-q8-efd"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="X3f-df-9gm" id="1Cp-jM-bsU"/>
+                        <outlet property="timeTextField" destination="MPP-ya-GV9" id="mtW-0K-vQw"/>
+                        <outlet property="titleTextField" destination="bla-LU-Hx4" id="K01-Mx-TO5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y46-7g-FZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
