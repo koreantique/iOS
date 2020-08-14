@@ -15,11 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var paramID: String?
     var paramPW: String?
+    var paramUserType: String?
+    var paramSession: Bool?
+    
+    var paramTime: String?
+    var paramElec: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Thread.sleep(forTimeInterval: 3.0)
         FirebaseApp.configure()
+        
+        if Auth.auth().currentUser != nil{
+            paramSession = true
+        } else{
+            paramSession = false
+        }
         
         return true
     }

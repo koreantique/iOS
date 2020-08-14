@@ -56,6 +56,7 @@ class UserJoinViewController: UIViewController {
             let password = pwTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let phone = phoneTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let usertype = 1
             
             //create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -67,13 +68,15 @@ class UserJoinViewController: UIViewController {
                     //User was created successfully, now store the firse name and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["name":name, "password":password,"phone":phone, "uid": result!.user.uid ]) { (error) in
+                    db.collection("users").addDocument(data: ["name":name, "password":password,"phone":phone, "uid": result!.user.uid, "usertype": usertype ]) { (error) in
                         if error != nil {
                             print("Error saving user data")
                         }
                     }
                     //transition to the home screen
                     self.transitionToHome()
+                    
+                    
                     
                 }
             }
@@ -86,14 +89,5 @@ class UserJoinViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

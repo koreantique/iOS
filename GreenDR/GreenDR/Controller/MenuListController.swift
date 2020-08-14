@@ -40,7 +40,7 @@ class MenuListController: UITableViewController{
         
         switch indexPath.row {
         case 0: dismiss(animated: true)
-        case 1: if(ad?.paramID != nil){
+        case 1: if(ad?.paramSession == true){
             self.navigationController?.pushViewController(GoNotice, animated: true)} else{showAlert(title: "알림", message: "로그인을 먼저 해주세요")}
         case 2: self.navigationController?.pushViewController(GoPredict, animated: true)
         case 3: self.navigationController?.pushViewController(GoNews, animated: true)

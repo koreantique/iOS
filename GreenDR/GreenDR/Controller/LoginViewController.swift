@@ -7,6 +7,8 @@ protocol SignButtonDelegate {
 
 class LoginViewController: UIViewController{
     
+    let ad = UIApplication.shared.delegate as? AppDelegate
+    
     var selectionDelegate: SignButtonDelegate!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -30,7 +32,8 @@ class LoginViewController: UIViewController{
             if error != nil {
                 self.showAlert(title: "알림", message: "아이디 또는 패스워드를 확인하세요.")
             }else {
-                
+                self.ad?.paramID = self.emailTextField.text
+                self.ad?.paramSession = true
                 self.dismiss(animated: true, completion: nil)
             }
         }

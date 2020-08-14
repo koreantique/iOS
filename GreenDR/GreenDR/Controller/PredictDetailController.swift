@@ -12,7 +12,11 @@ import TinyConstraints
 
 
 class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, ChartViewDelegate {
+    
+    let ad = UIApplication.shared.delegate as? AppDelegate
+    
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var elecField: UITextField!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -70,11 +74,12 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
     
 
     @IBOutlet weak var timeLabel: UILabel!
+
     
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
-        chartView.backgroundColor = .darkGray
+        chartView.backgroundColor = .lightGray
         chartView.rightAxis.enabled = false
         let yAxis = chartView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 9)
@@ -121,10 +126,12 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
     
     
     @IBAction func tapReservationButton(_ sender: Any) {
-        if (textField.text == ""){
-            showAlert(title: "알림", message: "시간을선택하세요")
+        if (textField.text == "" || elecField.text == ""){
+            showAlert(title: "알림", message: "모두 입력하세요")
         }
         else {
+            ad?.paramTime = textField.text
+            ad?.paramElec = textField.text
             showAlert(title: "알림", message: "예약이 완료되었습니다.")
         }
     }
@@ -147,49 +154,75 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         print(entry)
     }
     
+    func colorPicker(value : Double) -> NSUIColor {
+        if value > 20{
+            return NSUIColor.red
+        }
+        else{
+            return NSUIColor.white
+        }
+    }
+    
+    func sizePicker(value : Double) -> Int {
+        if value > 35{
+            return 5
+        } else{
+            return 3
+        }
+    }
+    
     func setData(){
         let set1 = LineChartDataSet(entries: yValues, label: "예측발전량")
         set1.mode = .cubicBezier
-        set1.circleRadius = 3
-        set1.setCircleColor(.white)
+        set1.circleRadius = 5
         set1.valueFont = .systemFont(ofSize: 12)
-        set1.lineWidth = 2
+        set1.lineWidth = 5
         set1.setColor(.lightGray)
         set1.fillAlpha = 0.8
-        set1.fillColor = .init(red: 148/255.0, green: 204/255.0, blue: 70/255.0, alpha: 1)
+        set1.fillColor = .init(red: 180/255.0, green: 204/255.0, blue: 70/255.0, alpha: 1)
         set1.drawFilledEnabled = true
+        
         
         let data = LineChartData(dataSet: set1)
         data.setValueTextColor(.white)
         
         lineChartView.data = data
+        
+        set1.circleHoleRadius = 0
+        
+        set1.circleColors = set1.entries.map({ (entry: ChartDataEntry) -> NSUIColor in
+            return colorPicker(value: entry.y)
+        })
+
     }
     
+    
     let yValues: [ChartDataEntry] = [
-        ChartDataEntry(x: 0.0, y: 10.0),
-        ChartDataEntry(x: 1.0, y: 5.0),
-        ChartDataEntry(x: 2.0, y: 7.0),
-        ChartDataEntry(x: 3.0, y: 18.0),
-        ChartDataEntry(x: 4.0, y: 12.0),
-        ChartDataEntry(x: 5.0, y: 14.0),
+        ChartDataEntry(x: 0.0, y: 3),
+        ChartDataEntry(x: 1.0, y: 3.5),
+        ChartDataEntry(x: 2.0, y: 3.7),
+        ChartDataEntry(x: 3.0, y: 4),
+        ChartDataEntry(x: 4.0, y: 4.5),
+        ChartDataEntry(x: 5.0, y: 5),
         ChartDataEntry(x: 6.0, y: 6.0),
-        ChartDataEntry(x: 7.0, y: 3.0),
-        ChartDataEntry(x: 8.0, y: 17.0),
-        ChartDataEntry(x: 9.0, y: 10.0),
-        ChartDataEntry(x: 10.0, y: 14.0),
-        ChartDataEntry(x: 11.0, y: 11.0),
-        ChartDataEntry(x: 12.0, y: 3.0),
-        ChartDataEntry(x: 13.0, y: 19.0),
-        ChartDataEntry(x: 14.0, y: 10.0),
-        ChartDataEntry(x: 15.0, y: 16.0),
-        ChartDataEntry(x: 16.0, y: 10.0),
-        ChartDataEntry(x: 17.0, y: 24.0),
-        ChartDataEntry(x: 18.0, y: 28.0),
-        ChartDataEntry(x: 19.0, y: 41.0),
-        ChartDataEntry(x: 20.0, y: 16.0),
-        ChartDataEntry(x: 21.0, y: 25.0),
-        ChartDataEntry(x: 22.0, y: 27.0),
-        ChartDataEntry(x: 23.0, y: 28.0),
-        ChartDataEntry(x: 24.0, y: 36.0),
+        ChartDataEntry(x: 7.0, y: 10),
+        ChartDataEntry(x: 8.0, y: 15),
+        ChartDataEntry(x: 9.0, y: 21),
+        ChartDataEntry(x: 10.0, y: 23),
+        ChartDataEntry(x: 11.0, y: 26),
+        ChartDataEntry(x: 12.0, y: 29),
+        ChartDataEntry(x: 13.0, y: 36),
+        ChartDataEntry(x: 14.0, y: 39),
+        ChartDataEntry(x: 15.0, y: 37),
+        ChartDataEntry(x: 16.0, y: 43),
+        ChartDataEntry(x: 17.0, y: 40),
+        ChartDataEntry(x: 18.0, y: 29),
+        ChartDataEntry(x: 19.0, y: 27),
+        ChartDataEntry(x: 20.0, y: 22),
+        ChartDataEntry(x: 21.0, y: 16),
+        ChartDataEntry(x: 22.0, y: 11),
+        ChartDataEntry(x: 23.0, y: 13),
+        ChartDataEntry(x: 24.0, y: 15),
     ]
+    
 }

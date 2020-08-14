@@ -9,7 +9,10 @@
 import UIKit
 
 class NoticeViewController: UIViewController {
+    
 
+    @IBOutlet var tableViewMain: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,17 +20,34 @@ class NoticeViewController: UIViewController {
         self.navigationItem.title = "알림 게시판"
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.darkGray]
         // Do any additional setup after loading the view.
+        
+        tableViewMain.delegate = self
+        tableViewMain.dataSource = self
+        
+        
+    }
+
+    @IBAction func tapPostButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "PostingSegue", sender: self)
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension NoticeViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("you tapped me")
     }
-    */
+}
 
+extension NoticeViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = "Hello World!"
+        return cell
+    }
 }
