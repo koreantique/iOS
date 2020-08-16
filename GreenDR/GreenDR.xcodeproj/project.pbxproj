@@ -20,6 +20,11 @@
 		9143B55924C1BA6700594019 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B55824C1BA6700594019 /* MainViewController.swift */; };
 		9145118F24CED10500CD8E57 /* PredictDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145118E24CED10500CD8E57 /* PredictDetailController.swift */; };
 		91458CB624D19E5000C7DA1E /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91458CB524D19E5000C7DA1E /* PredictViewController.swift */; };
+		914B390B24E9A68700A3FAE2 /* BiddingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B390A24E9A68700A3FAE2 /* BiddingDataViewController.swift */; };
+		914B390D24E9A77500A3FAE2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B390C24E9A77500A3FAE2 /* DataModel.swift */; };
+		914B390F24E9A9C800A3FAE2 /* SumDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B390E24E9A9C800A3FAE2 /* SumDataController.swift */; };
+		914B391124E9B30700A3FAE2 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B391024E9B30700A3FAE2 /* DataType.swift */; };
+		9150107A24E944EC00B292A2 /* PredictReservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9150107924E944EC00B292A2 /* PredictReservationController.swift */; };
 		91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D81E7324CEECDC00952D91 /* SignViewController.swift */; };
 		91DD94AC24B2E91700814F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AB24B2E91700814F32 /* AppDelegate.swift */; };
 		91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AD24B2E91700814F32 /* SceneDelegate.swift */; };
@@ -49,6 +54,11 @@
 		9143B55824C1BA6700594019 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9145118E24CED10500CD8E57 /* PredictDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictDetailController.swift; sourceTree = "<group>"; };
 		91458CB524D19E5000C7DA1E /* PredictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
+		914B390A24E9A68700A3FAE2 /* BiddingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiddingDataViewController.swift; sourceTree = "<group>"; };
+		914B390C24E9A77500A3FAE2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		914B390E24E9A9C800A3FAE2 /* SumDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumDataController.swift; sourceTree = "<group>"; };
+		914B391024E9B30700A3FAE2 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		9150107924E944EC00B292A2 /* PredictReservationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictReservationController.swift; sourceTree = "<group>"; };
 		91D81E7324CEECDC00952D91 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		91DD94A824B2E91700814F32 /* GreenDR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenDR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD94AB24B2E91700814F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				91DD94AF24B2E91700814F32 /* ViewController.swift */,
+				914B390A24E9A68700A3FAE2 /* BiddingDataViewController.swift */,
+				914B390E24E9A9C800A3FAE2 /* SumDataController.swift */,
 				9143B55824C1BA6700594019 /* MainViewController.swift */,
 				91044ED424C58AD1003F850C /* MenuListController.swift */,
 				91044EDA24C6BC5F003F850C /* NewsViewController.swift */,
@@ -101,6 +113,7 @@
 				91FAF6E924E67BA0007DBCE9 /* PostingViewController.swift */,
 				91458CB524D19E5000C7DA1E /* PredictViewController.swift */,
 				9145118E24CED10500CD8E57 /* PredictDetailController.swift */,
+				9150107924E944EC00B292A2 /* PredictReservationController.swift */,
 				91044ED024C55422003F850C /* PersonalinfoController.swift */,
 				91044ECE24C553E0003F850C /* LoginViewController.swift */,
 				91D81E7324CEECDC00952D91 /* SignViewController.swift */,
@@ -136,6 +149,8 @@
 				911A41F824D2E5D2004348DD /* Helphers */,
 				9145119124CEEB6F00CD8E57 /* Controller */,
 				91044EE024C6ECE3003F850C /* Type1.swift */,
+				914B391024E9B30700A3FAE2 /* DataType.swift */,
+				914B390C24E9A77500A3FAE2 /* DataModel.swift */,
 				91FAF6EF24E6BA5D007DBCE9 /* NoticeType.swift */,
 				91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */,
 				91DD94B124B2E91700814F32 /* Main.storyboard */,
@@ -280,20 +295,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914B390F24E9A9C800A3FAE2 /* SumDataController.swift in Sources */,
+				9150107A24E944EC00B292A2 /* PredictReservationController.swift in Sources */,
 				91458CB624D19E5000C7DA1E /* PredictViewController.swift in Sources */,
 				91DD94B024B2E91700814F32 /* ViewController.swift in Sources */,
 				91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */,
 				91044ED124C55422003F850C /* PersonalinfoController.swift in Sources */,
+				914B390D24E9A77500A3FAE2 /* DataModel.swift in Sources */,
 				91DD94AC24B2E91700814F32 /* AppDelegate.swift in Sources */,
 				91044EDD24C6BFCD003F850C /* NoticeViewController.swift in Sources */,
 				91044ED524C58AD1003F850C /* MenuListController.swift in Sources */,
 				91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */,
 				91044EDB24C6BC5F003F850C /* NewsViewController.swift in Sources */,
 				9145118F24CED10500CD8E57 /* PredictDetailController.swift in Sources */,
+				914B391124E9B30700A3FAE2 /* DataType.swift in Sources */,
 				911A41FA24D2E5F7004348DD /* Utilities.swift in Sources */,
 				91044EE124C6ECE3003F850C /* Type1.swift in Sources */,
 				91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */,
 				91FAF6F024E6BA5D007DBCE9 /* NoticeType.swift in Sources */,
+				914B390B24E9A68700A3FAE2 /* BiddingDataViewController.swift in Sources */,
 				91044ECF24C553E0003F850C /* LoginViewController.swift in Sources */,
 				91E5C38D24CFF6DC00C3A0F1 /* UserJoinViewController.swift in Sources */,
 				91FAF6EE24E6B596007DBCE9 /* NoticeModel.swift in Sources */,

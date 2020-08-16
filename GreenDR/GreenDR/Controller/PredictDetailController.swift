@@ -17,7 +17,15 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var elecField: UITextField!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var elecDataField: UILabel!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? PredictReservationController else{ return}
+        
+        rvc.paramElec = self.elecDataField.text!
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -53,7 +61,7 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         let pickerView = UIPickerView()
         pickerView.delegate = self
         
-        textField.inputView = pickerView
+        //textField.inputView = pickerView
     }
     
     func dismissPickerView(){
@@ -64,16 +72,12 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         toolBar.setItems([doneButton], animated: true)
         toolBar.isUserInteractionEnabled = true
         
-        textField.inputAccessoryView = toolBar
+        //textField.inputAccessoryView = toolBar
     }
     
     @objc func dismissKeyboard(){
         view.endEditing(true)
     }
-    
-    
-
-    @IBOutlet weak var timeLabel: UILabel!
 
     
     
@@ -120,20 +124,21 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         
         lineChartView.legend.textColor = .white
         
+        self.elecDataField.text = "462(KW)"
         
     }
     
     
     
     @IBAction func tapReservationButton(_ sender: Any) {
-        if (textField.text == "" || elecField.text == ""){
-            showAlert(title: "알림", message: "모두 입력하세요")
-        }
-        else {
-            ad?.paramTime = textField.text
-            ad?.paramElec = textField.text
-            showAlert(title: "알림", message: "예약이 완료되었습니다.")
-        }
+//        if (textField.text == "" || elecField.text == ""){
+//            showAlert(title: "알림", message: "모두 입력하세요")
+//        }
+//        else {
+//            ad?.paramTime = textField.text
+//            ad?.paramElec = textField.text
+//            showAlert(title: "알림", message: "예약이 완료되었습니다.")
+//        }
     }
     
     func showAlert(title:String, message:String){

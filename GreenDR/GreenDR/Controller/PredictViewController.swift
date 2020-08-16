@@ -16,6 +16,8 @@ class PredictViewController: UIViewController {
     @IBOutlet weak var ButtonH1: UIButton!
     @IBOutlet weak var ButtonH2: UIButton!
     
+    @IBOutlet weak var ButtonCenter: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +31,7 @@ class PredictViewController: UIViewController {
         ButtonS2.layer.cornerRadius = 0.5 * ButtonS2.bounds.size.width
         ButtonH1.layer.cornerRadius = 0.5 * ButtonH1.bounds.size.width
         ButtonH2.layer.cornerRadius = 0.5 * ButtonH2.bounds.size.width
+        ButtonCenter.layer.cornerRadius = 0.5 * ButtonCenter.bounds.size.width
     }
     
 
@@ -44,7 +47,9 @@ class PredictViewController: UIViewController {
     @IBAction func tapH2Button(_ sender: Any) {
         self.performSegue(withIdentifier: "PredictDetailSegue", sender: self)
     }
-    
+    @IBAction func tapCenterButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "PredictDetailSegue", sender: self)
+    }
     
     
     

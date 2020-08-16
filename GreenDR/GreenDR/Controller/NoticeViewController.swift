@@ -38,11 +38,14 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 for notices in snapshot.children.allObjects as![DataSnapshot]{
                     let noticeObject = notices.value as? [String: AnyObject]
+                    
                     let noticeTitle = noticeObject?["title"]
                     let noticeTime = noticeObject?["time"]
                     let noticeAmount = noticeObject?["amount"]
+                    let noticeContents = noticeObject?["contents"]
                     
-                    let notice = NoticeModel(title: noticeTitle as! String?, time: noticeTime as! String?, amount: noticeAmount as! String?)
+                    
+                    let notice = NoticeModel(title: noticeTitle as! String?, time: noticeTime as! String?, amount: noticeAmount as! String?, contents: noticeContents as! String?)
                     
                     self.noticeList.append(notice)
                 }
@@ -56,6 +59,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         self.performSegue(withIdentifier: "NoticeDetailSegue", sender: self)
     }
     
@@ -71,8 +75,8 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         notice = noticeList[indexPath.row]
         
         cell.titleLabel.text = notice.title
-        cell.timeLabel.text = notice.time! + "시"
-        cell.amountLabel.text = notice.amount! + "KW"
+        cell.timeLabel.text = notice.time!
+        cell.amountLabel.text = "추가 전력량 : " + notice.amount! + "KW"
         
         return cell
         
@@ -81,14 +85,9 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination
-        
-        guard let rvc = dest as? NoticeDetailViewController else{
-            return
+
+        if let destination = segue.destination as? NoticeDetailViewController{
+            destination.notice = noticeList[(tableViewMain.indexPathForSelectedRow?.row)!]
         }
-        
-        rvc.paramAmount = "156KW"
-        rvc.paramTime = "13:00"
-        
     }
 }

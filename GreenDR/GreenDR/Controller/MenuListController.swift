@@ -1,7 +1,7 @@
 import UIKit
 
 class MenuListController: UITableViewController{
-    var items = ["그린DR이란?", "알림게시판", "예측정보", "뉴스"]
+    var items = ["메인페이지", "알림게시판", "예측정보", "뉴스"]
     
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     let whiteColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1)

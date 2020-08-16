@@ -5,6 +5,9 @@ import Firebase
 class MainViewController: UIViewController{
     var menu: SideMenuNavigationController?
     
+    @IBOutlet weak var reliablityGreenDR: UIButton!
+    @IBOutlet weak var economicGreenDR: UIButton!
+    @IBOutlet weak var greenDRNews: UIButton!
     
     
     override func viewDidLoad() {
@@ -26,6 +29,9 @@ class MainViewController: UIViewController{
         imageView.image = image
         navigationItem.titleView = imageView
         
+        reliablityGreenDR.layer.cornerRadius = 10
+        economicGreenDR.layer.cornerRadius = 10
+        greenDRNews.layer.cornerRadius = 10
     }
 
     

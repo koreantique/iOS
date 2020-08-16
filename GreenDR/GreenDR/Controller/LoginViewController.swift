@@ -5,6 +5,10 @@ protocol SignButtonDelegate {
     func didTapButton()
 }
 
+var perButtonFlag: Bool = false
+var comButtonFlag: Bool = false
+var pickUserFlag: Int = 0
+
 class LoginViewController: UIViewController{
     
     let ad = UIApplication.shared.delegate as? AppDelegate
@@ -13,10 +17,46 @@ class LoginViewController: UIViewController{
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var perButton: UIButton!
+    @IBOutlet weak var comButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        perButtonFlag = false
+        comButtonFlag = false
+    }
+    
+    //button picker
+    @IBAction func tapPerButton(_ sender: Any) {
+        if(perButtonFlag == false){
+            perButton.layer.borderColor = UIColor.darkGray.cgColor
+            perButton.layer.borderWidth = 1.5
+            perButtonFlag = true
+            
+            if(comButtonFlag == true){
+                comButton.layer.borderColor = nil
+                comButton.layer.borderWidth = 0
+                comButtonFlag = false
+            }
+            pickUserFlag = 1
+        }
+        
+    }
+    @IBAction func tapComButton(_ sender: Any) {
+        if(comButtonFlag == false){
+            comButton.layer.borderColor = UIColor.darkGray.cgColor
+            comButton.layer.borderWidth = 1.5
+            comButtonFlag = true
+            
+            if(perButtonFlag == true){
+                perButton.layer.borderColor = nil
+                perButton.layer.borderWidth = 0
+                perButtonFlag = false
+            }
+            pickUserFlag = 0
+        }
     }
     
     @IBAction func tapSignButton(_ sender: Any) {
