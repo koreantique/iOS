@@ -340,6 +340,7 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.9)
   - SideMenu (6.4.8)
+  - SwiftCharts (0.6.5)
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
@@ -350,6 +351,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Firestore
   - SideMenu
+  - SwiftCharts
   - TinyConstraints
 
 SPEC REPOS:
@@ -375,6 +377,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SideMenu
+    - SwiftCharts
     - TinyConstraints
 
 SPEC CHECKSUMS:
@@ -399,8 +402,9 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 71e98bb40c9b51f37e168dfa48c2d4316738ffcd
+PODFILE CHECKSUM: 0c8bb5afcbbfacbc7b194f245cf067f5bb0ca9b3
 
 COCOAPODS: 1.9.3

@@ -17,6 +17,8 @@
 		91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044EE224C82ECC003F850C /* NewsDetailController.swift */; };
 		911A41F724D2DDC7004348DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911A41F624D2DDC7004348DD /* GoogleService-Info.plist */; };
 		911A41FA24D2E5F7004348DD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911A41F924D2E5F7004348DD /* Utilities.swift */; };
+		9136222A24EAA69F00526704 /* BiddingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136222924EAA69F00526704 /* BiddingDetailController.swift */; };
+		9136222C24EACB6A00526704 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136222B24EACB6A00526704 /* BarChartViewController.swift */; };
 		9143B55924C1BA6700594019 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B55824C1BA6700594019 /* MainViewController.swift */; };
 		9145118F24CED10500CD8E57 /* PredictDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145118E24CED10500CD8E57 /* PredictDetailController.swift */; };
 		91458CB624D19E5000C7DA1E /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91458CB524D19E5000C7DA1E /* PredictViewController.swift */; };
@@ -25,6 +27,8 @@
 		914B390F24E9A9C800A3FAE2 /* SumDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B390E24E9A9C800A3FAE2 /* SumDataController.swift */; };
 		914B391124E9B30700A3FAE2 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B391024E9B30700A3FAE2 /* DataType.swift */; };
 		9150107A24E944EC00B292A2 /* PredictReservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9150107924E944EC00B292A2 /* PredictReservationController.swift */; };
+		91CEDF8924EB036F001F0E8B /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CEDF8824EB036F001F0E8B /* ExamplesDefaults.swift */; };
+		91CEDF8B24EB038F001F0E8B /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CEDF8A24EB038F001F0E8B /* Env.swift */; };
 		91D81E7424CEECDC00952D91 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D81E7324CEECDC00952D91 /* SignViewController.swift */; };
 		91DD94AC24B2E91700814F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AB24B2E91700814F32 /* AppDelegate.swift */; };
 		91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD94AD24B2E91700814F32 /* SceneDelegate.swift */; };
@@ -51,6 +55,8 @@
 		91044EE224C82ECC003F850C /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		911A41F624D2DDC7004348DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		911A41F924D2E5F7004348DD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9136222924EAA69F00526704 /* BiddingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiddingDetailController.swift; sourceTree = "<group>"; };
+		9136222B24EACB6A00526704 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		9143B55824C1BA6700594019 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9145118E24CED10500CD8E57 /* PredictDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictDetailController.swift; sourceTree = "<group>"; };
 		91458CB524D19E5000C7DA1E /* PredictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,8 @@
 		914B390E24E9A9C800A3FAE2 /* SumDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumDataController.swift; sourceTree = "<group>"; };
 		914B391024E9B30700A3FAE2 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		9150107924E944EC00B292A2 /* PredictReservationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictReservationController.swift; sourceTree = "<group>"; };
+		91CEDF8824EB036F001F0E8B /* ExamplesDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
+		91CEDF8A24EB038F001F0E8B /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		91D81E7324CEECDC00952D91 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		91DD94A824B2E91700814F32 /* GreenDR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenDR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD94AB24B2E91700814F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 			children = (
 				91DD94AF24B2E91700814F32 /* ViewController.swift */,
 				914B390A24E9A68700A3FAE2 /* BiddingDataViewController.swift */,
+				9136222924EAA69F00526704 /* BiddingDetailController.swift */,
 				914B390E24E9A9C800A3FAE2 /* SumDataController.swift */,
 				9143B55824C1BA6700594019 /* MainViewController.swift */,
 				91044ED424C58AD1003F850C /* MenuListController.swift */,
@@ -119,6 +128,7 @@
 				91D81E7324CEECDC00952D91 /* SignViewController.swift */,
 				91E5C38C24CFF6DC00C3A0F1 /* UserJoinViewController.swift */,
 				91E5C38E24CFF6E700C3A0F1 /* CompanyJoinViewController.swift */,
+				9136222B24EACB6A00526704 /* BarChartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +163,8 @@
 				914B390C24E9A77500A3FAE2 /* DataModel.swift */,
 				91FAF6EF24E6BA5D007DBCE9 /* NoticeType.swift */,
 				91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */,
+				91CEDF8824EB036F001F0E8B /* ExamplesDefaults.swift */,
+				91CEDF8A24EB038F001F0E8B /* Env.swift */,
 				91DD94B124B2E91700814F32 /* Main.storyboard */,
 				91DD94B424B2E91800814F32 /* Assets.xcassets */,
 				91DD94B624B2E91800814F32 /* LaunchScreen.storyboard */,
@@ -296,9 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				914B390F24E9A9C800A3FAE2 /* SumDataController.swift in Sources */,
+				9136222A24EAA69F00526704 /* BiddingDetailController.swift in Sources */,
 				9150107A24E944EC00B292A2 /* PredictReservationController.swift in Sources */,
 				91458CB624D19E5000C7DA1E /* PredictViewController.swift in Sources */,
 				91DD94B024B2E91700814F32 /* ViewController.swift in Sources */,
+				91CEDF8924EB036F001F0E8B /* ExamplesDefaults.swift in Sources */,
 				91E5C38F24CFF6E700C3A0F1 /* CompanyJoinViewController.swift in Sources */,
 				91044ED124C55422003F850C /* PersonalinfoController.swift in Sources */,
 				914B390D24E9A77500A3FAE2 /* DataModel.swift in Sources */,
@@ -308,9 +322,11 @@
 				91DD94AE24B2E91700814F32 /* SceneDelegate.swift in Sources */,
 				91044EDB24C6BC5F003F850C /* NewsViewController.swift in Sources */,
 				9145118F24CED10500CD8E57 /* PredictDetailController.swift in Sources */,
+				91CEDF8B24EB038F001F0E8B /* Env.swift in Sources */,
 				914B391124E9B30700A3FAE2 /* DataType.swift in Sources */,
 				911A41FA24D2E5F7004348DD /* Utilities.swift in Sources */,
 				91044EE124C6ECE3003F850C /* Type1.swift in Sources */,
+				9136222C24EACB6A00526704 /* BarChartViewController.swift in Sources */,
 				91044EE324C82ECC003F850C /* NewsDetailController.swift in Sources */,
 				91FAF6F024E6BA5D007DBCE9 /* NoticeType.swift in Sources */,
 				914B390B24E9A68700A3FAE2 /* BiddingDataViewController.swift in Sources */,

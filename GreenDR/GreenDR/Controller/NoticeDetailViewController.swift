@@ -16,8 +16,6 @@ class NoticeDetailViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var titleTextField: UILabel!
     @IBOutlet weak var contentsTextField: UITextView!
-    
-    private let database = Database.database().reference()
 
     let ref = Database.database().reference()
     
@@ -41,7 +39,7 @@ class NoticeDetailViewController: UIViewController {
         self.contentsTextField.layer.borderColor = UIColor.black.cgColor
         self.contentsTextField.layer.borderWidth = 0.5
         
-        database.child("Notice").observeSingleEvent(of: .value) { snapshot in
+        ref.child("Notice").observeSingleEvent(of: .value) { snapshot in
             guard let value = snapshot.value as? [String: Any] else {
                 return
             }
@@ -61,7 +59,7 @@ class NoticeDetailViewController: UIViewController {
         if(textField.text == ""){
             self.showAlert(title: "알림", message: "추가 신청 전령략을 입력하세요.")
         }else{
-            ref.child("ReliabilityReservation").childByAutoId().setValue(["amount": textField.text])
+            ref.child("Reservation").childByAutoId().setValue(["amount": textField.text!, "time": timeLabel.text!, "type": "1"])
             self.showAlert(title: "알림", message: "신청이 완료되었습니다.")
         }
     }

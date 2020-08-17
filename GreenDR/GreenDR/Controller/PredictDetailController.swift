@@ -11,12 +11,9 @@ import Charts
 import TinyConstraints
 
 
-class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, ChartViewDelegate {
+class PredictDetailController: UIViewController, UITextFieldDelegate, ChartViewDelegate {
     
-    let ad = UIApplication.shared.delegate as? AppDelegate
-    
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var elecField: UITextField!
+
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var elecDataField: UILabel!
     
@@ -26,23 +23,6 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         
         rvc.paramElec = self.elecDataField.text!
     }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return priorityTypes.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return priorityTypes[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPriority = priorityTypes[row]
-        textField.text = selectedPriority
-    }
-    
     
     func todayDate(){
         let formatter = DateFormatter()
@@ -52,34 +32,9 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         timeLabel.text = "\(current_date_string) 전력 생산 예측"
     }
 
-    
-    var selectedPriority: String?
-    
-    var priorityTypes = ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]
-    
-    func createPickerView(){
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        
-        //textField.inputView = pickerView
+    @IBAction func tapReservationButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "PredictReservationSegue", sender: self)
     }
-    
-    func dismissPickerView(){
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(self.dismissKeyboard))
-        toolBar.setItems([doneButton], animated: true)
-        toolBar.isUserInteractionEnabled = true
-        
-        //textField.inputAccessoryView = toolBar
-    }
-    
-    @objc func dismissKeyboard(){
-        view.endEditing(true)
-    }
-
-    
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
@@ -105,8 +60,6 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createPickerView()
-        dismissPickerView()
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.tintColor = UIColor.darkGray
@@ -124,35 +77,9 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
         
         lineChartView.legend.textColor = .white
         
-        self.elecDataField.text = "462(KW)"
+        self.elecDataField.text = "46520(KW)"
         
     }
-    
-    
-    
-    @IBAction func tapReservationButton(_ sender: Any) {
-//        if (textField.text == "" || elecField.text == ""){
-//            showAlert(title: "알림", message: "모두 입력하세요")
-//        }
-//        else {
-//            ad?.paramTime = textField.text
-//            ad?.paramElec = textField.text
-//            showAlert(title: "알림", message: "예약이 완료되었습니다.")
-//        }
-    }
-    
-    func showAlert(title:String, message:String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: {action in
-            print("tapped Dismiss")
-        }))
-        
-        present(alert, animated: true)
-    }
-    
-    
-
-    
     
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
@@ -160,19 +87,11 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
     }
     
     func colorPicker(value : Double) -> NSUIColor {
-        if value > 20{
+        if value >= 30{
             return NSUIColor.red
         }
         else{
             return NSUIColor.white
-        }
-    }
-    
-    func sizePicker(value : Double) -> Int {
-        if value > 35{
-            return 5
-        } else{
-            return 3
         }
     }
     
@@ -201,33 +120,32 @@ class PredictDetailController: UIViewController, UITextFieldDelegate, UIPickerVi
 
     }
     
-    
     let yValues: [ChartDataEntry] = [
-        ChartDataEntry(x: 0.0, y: 3),
-        ChartDataEntry(x: 1.0, y: 3.5),
-        ChartDataEntry(x: 2.0, y: 3.7),
-        ChartDataEntry(x: 3.0, y: 4),
-        ChartDataEntry(x: 4.0, y: 4.5),
-        ChartDataEntry(x: 5.0, y: 5),
-        ChartDataEntry(x: 6.0, y: 6.0),
-        ChartDataEntry(x: 7.0, y: 10),
-        ChartDataEntry(x: 8.0, y: 15),
-        ChartDataEntry(x: 9.0, y: 21),
-        ChartDataEntry(x: 10.0, y: 23),
-        ChartDataEntry(x: 11.0, y: 26),
+        ChartDataEntry(x: 0.0, y: 18),
+        ChartDataEntry(x: 1.0, y: 19),
+        ChartDataEntry(x: 2.0, y: 20),
+        ChartDataEntry(x: 3.0, y: 20.3),
+        ChartDataEntry(x: 4.0, y: 21),
+        ChartDataEntry(x: 5.0, y: 20),
+        ChartDataEntry(x: 6.0, y: 19),
+        ChartDataEntry(x: 7.0, y: 20.5),
+        ChartDataEntry(x: 8.0, y: 22),
+        ChartDataEntry(x: 9.0, y: 23),
+        ChartDataEntry(x: 10.0, y: 25),
+        ChartDataEntry(x: 11.0, y: 27),
         ChartDataEntry(x: 12.0, y: 29),
-        ChartDataEntry(x: 13.0, y: 36),
-        ChartDataEntry(x: 14.0, y: 39),
-        ChartDataEntry(x: 15.0, y: 37),
-        ChartDataEntry(x: 16.0, y: 43),
-        ChartDataEntry(x: 17.0, y: 40),
-        ChartDataEntry(x: 18.0, y: 29),
-        ChartDataEntry(x: 19.0, y: 27),
-        ChartDataEntry(x: 20.0, y: 22),
-        ChartDataEntry(x: 21.0, y: 16),
-        ChartDataEntry(x: 22.0, y: 11),
-        ChartDataEntry(x: 23.0, y: 13),
-        ChartDataEntry(x: 24.0, y: 15),
+        ChartDataEntry(x: 13.0, y: 28),
+        ChartDataEntry(x: 14.0, y: 30),
+        ChartDataEntry(x: 15.0, y: 31),
+        ChartDataEntry(x: 16.0, y: 32),
+        ChartDataEntry(x: 17.0, y: 35),
+        ChartDataEntry(x: 18.0, y: 34),
+        ChartDataEntry(x: 19.0, y: 33),
+        ChartDataEntry(x: 20.0, y: 34),
+        ChartDataEntry(x: 21.0, y: 31),
+        ChartDataEntry(x: 22.0, y: 29),
+        ChartDataEntry(x: 23.0, y: 27),
+        ChartDataEntry(x: 24.0, y: 28),
     ]
     
 }

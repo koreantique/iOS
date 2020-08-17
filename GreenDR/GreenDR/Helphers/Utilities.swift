@@ -7,5 +7,5 @@ class Utilities{
         return passwordTest.evaluate(with: password)
     }
     
-    
+    let lightGreenColor = UIColor(red: 232/255.0, green: 253/255.0, blue: 202/255.0, alpha: 1)
 }

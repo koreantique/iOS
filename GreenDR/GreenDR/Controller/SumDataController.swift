@@ -25,7 +25,7 @@ class SumDataController: UIViewController {
     }
     
     var startValue = 0
-    let endValue = 246
+    let endValue = 183
     
     @objc func handleUpdate() {
         self.countingLabel.text = "\(startValue)"

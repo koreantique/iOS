@@ -44,7 +44,7 @@ class PostingViewController: UIViewController, UITextFieldDelegate, UIPickerView
     func todayDate(){
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        tomorrow = formatter.string(from: Date()+86400)
+        tomorrow = formatter.string(from: Date())
         
 //        tomorrowLabel.text = "\(tomorrow) 전력 생산 예측"
     }
