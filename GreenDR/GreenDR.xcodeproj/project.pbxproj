@@ -133,6 +133,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		9164D3FF24ECEC1E00EF4366 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				914B390C24E9A77500A3FAE2 /* DataModel.swift */,
+				91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9164D40024ECFAE100EF4366 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91044EE024C6ECE3003F850C /* Type1.swift */,
+				914B391024E9B30700A3FAE2 /* DataType.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		91DD949F24B2E91700814F32 = {
 			isa = PBXGroup;
 			children = (
@@ -154,15 +172,13 @@
 		91DD94AA24B2E91700814F32 /* GreenDR */ = {
 			isa = PBXGroup;
 			children = (
-				91DD94AB24B2E91700814F32 /* AppDelegate.swift */,
-				91DD94AD24B2E91700814F32 /* SceneDelegate.swift */,
 				911A41F824D2E5D2004348DD /* Helphers */,
 				9145119124CEEB6F00CD8E57 /* Controller */,
-				91044EE024C6ECE3003F850C /* Type1.swift */,
-				914B391024E9B30700A3FAE2 /* DataType.swift */,
-				914B390C24E9A77500A3FAE2 /* DataModel.swift */,
+				9164D3FF24ECEC1E00EF4366 /* Model */,
+				9164D40024ECFAE100EF4366 /* View */,
+				91DD94AB24B2E91700814F32 /* AppDelegate.swift */,
+				91DD94AD24B2E91700814F32 /* SceneDelegate.swift */,
 				91FAF6EF24E6BA5D007DBCE9 /* NoticeType.swift */,
-				91FAF6ED24E6B596007DBCE9 /* NoticeModel.swift */,
 				91CEDF8824EB036F001F0E8B /* ExamplesDefaults.swift */,
 				91CEDF8A24EB038F001F0E8B /* Env.swift */,
 				91DD94B124B2E91700814F32 /* Main.storyboard */,

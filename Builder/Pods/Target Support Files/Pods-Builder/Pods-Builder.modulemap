@@ -1,0 +1,6 @@
+framework module Pods_Builder {
+  umbrella header "Pods-Builder-umbrella.h"
+
+  export *
+  module * { export * }
+}

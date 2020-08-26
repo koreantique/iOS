@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91E5432424BC448000BD9094 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5432324BC448000BD9094 /* secondViewController.swift */; };
 		91E57E1524A48B6800961CF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E57E1424A48B6800961CF2 /* AppDelegate.swift */; };
 		91E57E1724A48B6800961CF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E57E1624A48B6800961CF2 /* SceneDelegate.swift */; };
 		91E57E1924A48B6800961CF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E57E1824A48B6800961CF2 /* ViewController.swift */; };
@@ -18,7 +17,6 @@
 
 /* Begin PBXFileReference section */
 		91E5432024BC0F8D00BD9094 /* Sollook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sollook.entitlements; sourceTree = "<group>"; };
-		91E5432324BC448000BD9094 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		91E57E1124A48B6800961CF2 /* Sollook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sollook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E57E1424A48B6800961CF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E57E1624A48B6800961CF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				91E57E1424A48B6800961CF2 /* AppDelegate.swift */,
 				91E57E1624A48B6800961CF2 /* SceneDelegate.swift */,
 				91E57E1824A48B6800961CF2 /* ViewController.swift */,
-				91E5432324BC448000BD9094 /* secondViewController.swift */,
 				91E57E1A24A48B6800961CF2 /* Main.storyboard */,
 				91E57E1D24A48B6900961CF2 /* Assets.xcassets */,
 				91E57E1F24A48B6900961CF2 /* LaunchScreen.storyboard */,
@@ -143,7 +140,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E5432424BC448000BD9094 /* secondViewController.swift in Sources */,
 				91E57E1924A48B6800961CF2 /* ViewController.swift in Sources */,
 				91E57E1524A48B6800961CF2 /* AppDelegate.swift in Sources */,
 				91E57E1724A48B6800961CF2 /* SceneDelegate.swift in Sources */,

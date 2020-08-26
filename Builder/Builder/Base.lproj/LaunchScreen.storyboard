@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뚝딱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-w3-mMI">
+                                <rect key="frame" x="148.66666666666666" y="456" width="78" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2020 Awakers. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNj-Tc-Xr5">
+                                <rect key="frame" x="64.333333333333329" y="774" width="246.66666666666669" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인 맞춤형 건설 노동자 구인구직 서비스" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifY-Wy-ab9">
+                                <rect key="frame" x="75" y="518" width="225" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.58743513130783431" green="0.60182027284263961" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="lII-Ax-5ws">
+                                <rect key="frame" x="102.66666666666669" y="271" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="74M-Sf-YJg"/>
+                                    <constraint firstAttribute="width" secondItem="lII-Ax-5ws" secondAttribute="height" multiplier="1:1" id="Fpf-EP-b1A"/>
+                                    <constraint firstAttribute="width" constant="170" id="XYb-7O-2KO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dNj-Tc-Xr5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="0eF-2E-IUy"/>
+                            <constraint firstItem="Idq-w3-mMI" firstAttribute="top" secondItem="lII-Ax-5ws" secondAttribute="bottom" constant="15" id="6BP-hn-AgS"/>
+                            <constraint firstItem="ifY-Wy-ab9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HbG-Fr-cnS"/>
+                            <constraint firstItem="Idq-w3-mMI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hg9-xY-ifI"/>
+                            <constraint firstItem="lII-Ax-5ws" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IxI-5k-s3F"/>
+                            <constraint firstItem="dNj-Tc-Xr5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OgX-nq-9K3"/>
+                            <constraint firstItem="ifY-Wy-ab9" firstAttribute="top" secondItem="Idq-w3-mMI" secondAttribute="bottom" constant="8" id="ffY-xI-EMO"/>
+                            <constraint firstItem="lII-Ax-5ws" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="lsh-YQ-rWq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
