@@ -14,6 +14,8 @@
 		917E990824F6214E006B8E53 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E990724F6214E006B8E53 /* CommunityViewController.swift */; };
 		917E990A24F62180006B8E53 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E990924F62180006B8E53 /* MyInfoViewController.swift */; };
 		91A58EBF24F6ACCE0049FC43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A58EBE24F6ACCE0049FC43 /* LoginViewController.swift */; };
+		91C65C5F24F7B20800E03BB2 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C65C5E24F7B20800E03BB2 /* JoinViewController.swift */; };
+		91C65C6224F7B34D00E03BB2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C65C6124F7B34D00E03BB2 /* File.swift */; };
 		91EC0AA624F4D72800961384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EC0AA524F4D72800961384 /* AppDelegate.swift */; };
 		91EC0AA824F4D72800961384 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EC0AA724F4D72800961384 /* SceneDelegate.swift */; };
 		91EC0AAD24F4D72800961384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EC0AAB24F4D72800961384 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		917E990724F6214E006B8E53 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		917E990924F62180006B8E53 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		91A58EBE24F6ACCE0049FC43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		91C65C5E24F7B20800E03BB2 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		91C65C6124F7B34D00E03BB2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		91EC0AA224F4D72700961384 /* Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Builder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EC0AA524F4D72800961384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91EC0AA724F4D72800961384 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		91C65C6024F7B32D00E03BB2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				91C65C6124F7B34D00E03BB2 /* File.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		91EC0A9924F4D72700961384 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,7 @@
 		91EC0AA424F4D72700961384 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				91C65C6024F7B32D00E03BB2 /* Helper */,
 				91481CF124F6474C00D2F330 /* View */,
 				91EC0ABB24F4DB5900961384 /* Controller */,
 				91EC0AA524F4D72800961384 /* AppDelegate.swift */,
@@ -115,6 +128,7 @@
 				917E990724F6214E006B8E53 /* CommunityViewController.swift */,
 				917E990924F62180006B8E53 /* MyInfoViewController.swift */,
 				91A58EBE24F6ACCE0049FC43 /* LoginViewController.swift */,
+				91C65C5E24F7B20800E03BB2 /* JoinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +263,8 @@
 				91EC0AA624F4D72800961384 /* AppDelegate.swift in Sources */,
 				91EC0AA824F4D72800961384 /* SceneDelegate.swift in Sources */,
 				917E990824F6214E006B8E53 /* CommunityViewController.swift in Sources */,
+				91C65C5F24F7B20800E03BB2 /* JoinViewController.swift in Sources */,
+				91C65C6224F7B34D00E03BB2 /* File.swift in Sources */,
 				91A58EBF24F6ACCE0049FC43 /* LoginViewController.swift in Sources */,
 				917E990A24F62180006B8E53 /* MyInfoViewController.swift in Sources */,
 				91EC0ABA24F4DB5100961384 /* HomeViewController.swift in Sources */,
